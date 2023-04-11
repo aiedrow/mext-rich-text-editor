@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title id='doctitle'>Mext | Richj Text Editor</title>
@@ -10,9 +11,45 @@
         </style>
       <script>createEditor("jsEditor");</script>
     </head>
+    <style>
+      body {
+        background-color: #050505;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      #header {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2em;
+      }
+      #subheader {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.5em;
+      }
+      #download-button {
+        display: block;
+        margin: 50px auto;
+        padding: 15px 30px;
+        background-color: white;
+        color: #050505;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+      #download-button:hover {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
   <body>
-    
-    <a href='example.html'>Example</a>
-  
+    <div id="header">
+      Mext Text Editor
+    </div>
+    <div id="subheader">
+      A simple and powerful text editor for all your needs.
+    </div>
+    <a href="#" id="download-button">Download now</a>
   </body>
 </html>
