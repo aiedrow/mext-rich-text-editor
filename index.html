@@ -1,75 +1,111 @@
+<html>
+   <head>
+      <title id="doctitle">Mext | Rich Text Editor</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <script src="assets/mext.eval.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&amp;family=Alata&amp;display=swap">
+      <style>
+         #subheader a {
+            color: #fff;
+            background: #222;
+            padding: 11px 21px;
+            text-decoration: none;
+            border-radius: 8px
+         }
+      </style>
+      <script>
+         createEditor("jsEditor")
+      </script>
+      <style>
+         body {
+            background-color: #050505 !important;
+            color: #fff !important;
+            font-family: Arial, sans-serif
+         }
 
+         #header {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em
+         }
 
-    
-        <title id="doctitle">Mext | Rich Text Editor</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <script src="assets/mext.eval.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Alata&display=swap">
-        <style>
-            #subheader a {
-                color: #fff;
-                background: #222;
-                padding: 11px 21px;
-                text-decoration: none;
-                border-radius: 8px;
-            }
-        </style>
-      <script>createEditor("jsEditor");</script>
-    
-    <style>
-      body {
-        background-color: #050505!important;
-        color: white!important;
-        font-family: Arial, sans-serif;
-      }
-      #header {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 2em;
-      }
-      #subheader {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 1.5em;
-      }
-      #download-button {
-        display: block;
-        margin: 50px auto;
-        padding: 15px 30px;
-        background-color: white;
-        color: #050505;
-        width: auto;
-        max-width:151px;
-        text-align: center;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      #download-button:hover {
-        background-color: #dddddd;
-      }
-    </style>
-  
-  
-<center>
-    <div style='max-width:800px;width:69vw;'>
-            <div id="header"><b>Mext Text Editor</b><br><small><small><small>A simple and powerful text editor for all your needs.</small></small></small></div>
+         #subheader {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.5em
+         }
 
-                <div id="subheader">
-                    <small style="font-size:39%;display:flex;width:100%;justify-content: space-around;">
-                        <a href="index.html">Homepage</a>
-                        <a href="index.html">Usage</a>
-                        <a href="example.html">Example</a>
-                    </small>
-                </div>
+         #download-button {
+            display: block;
+            margin: 50px auto;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #050505;
+            width: auto;
+            max-width: 151px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em
+         }
 
-            <a href="#" id="download-button">Download now</a><br><br>
-            <p><code>&lt;script src=&quot;path/to/mext.js&quot;&gt;&lt;/script&gt;</code></p>
-
-    </div>
-</center>
-
-
-</body>
-</html>  
+         #download-button:hover {
+            background-color: #ddd
+         }
+      </style>
+   </head>
+   <body>
+      <center>
+         <div style="max-width:800px;width:69vw">
+            <div id="header">
+               <b>Mext Text Editor</b>
+               <br>
+               <small>
+                  <small>
+                     <small>A simple and powerful text editor for all your needs.</small>
+                  </small>
+               </small>
+            </div>
+            <div id="subheader">
+               <small style="font-size:39%;display:flex;width:100%;justify-content:space-around">
+                  <a href="index.html">Homepage</a>
+                  <a href="index.html">Usage</a>
+                  <a href="example.html">Example</a>
+               </small>
+            </div>
+            <br>
+            <br>
+            <div style="text-align:left;width:76%" id="install">
+               <b>Installation</b>
+               <p>
+                  <small>To use the editor, you need to include the mext.js file in your HTML code.</small>
+                  <code style="display:block;margin:10px 0;background:#131313;width:fit-content;padding:5px 10px;border-radius:6px">&lt;script src="path/to/mext.js"&gt;&lt;/script&gt; <br>
+                     <br>&lt;link rel="stylesheet" href="path/to/mext.css"&gt; </code>
+               </p>
+            </div>
+            <div style="text-align:left;width:76%;margin-top:51px" id="usage">
+               <b>Usage</b>
+               <p>
+                  <small>To create a new editor, call the createEditor(textareaId) function in your JavaScript code, passing in the id of the textarea element that you want to replace with the editor.</small>
+                  <code style="display:block;margin:10px 0;background:#131313;width:fit-content;padding:5px 10px;border-radius:6px">createEditor('myTextarea');</code>
+                  <small>The editor will be created dynamically in the HTML DOM and replace the specified textarea.</small>
+               </p>
+            </div>
+            <div style="text-align:left;width:76%;margin-top:51px" id="download">
+               <b>Download</b>
+               <p>
+                  <small style="font-size:76%">Click On The Link Below to Download The Source Code in Zip Format</small>
+               </p>
+               <a href="https://github.com/aiedrow/mext-rich-text-editor/archive/refs/heads/main.zip" style="text-decoration:none">
+                  <button style="display:block;margin:10px 0;padding:10px 18px;border:0;border-radius:8px;background:#111;color:#fff;text-decoration:none">Download Zip</button>
+                  <p></p>
+               </a>
+            </div>
+            <br>
+         </div>
+      </center>
+   </body>
+</html>
