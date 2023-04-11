@@ -1,0 +1,6 @@
+.jsEditor{display:block;width:100%;padding:0;margin-top:6px;overflow:hidden;border-radius:8px;}
+
+.jsEditor-toolbar{display:flex;flex-wrap:wrap;padding:5px 8px;background:#fff;} 
+
+.jsEditor-toolbar buttonx{width:30px;border:0;color:#000;background:#fff;text-align:center;display: inline-table;} 
+.jsEditor-toolbar buttonx k{color:#000;} 
